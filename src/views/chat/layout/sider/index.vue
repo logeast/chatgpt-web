@@ -114,8 +114,9 @@ watch(
   </template>
   <PromptStore v-model:visible="show" />
   <NModal v-model:show="showSponsor" preset="card" style="width: 480px">
-    <div class="-mt-4">
+    <div class="-mt-8">
       <Sponsor />
+      <img class="w-full mt-4" src="https://logeast.cc/cdn/imghub/taoli-lab-qr.png" alt="">
     </div>
   </NModal>
 </template>
