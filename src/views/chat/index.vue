@@ -494,10 +494,10 @@ onUnmounted(() => {
                     target="_blank" class="text-blue-500"
                   >桃李服务协议</a>
                 </div>
-                <div class="text-center text-red-500 pb-2">
+                <div class="text-center text-red-500">
                   服务器昂贵，接口昂贵，但网站免费，每人每月捐 3 元，就能永久免费下去
                 </div>
-                <img width="240px" height="360px" src="https://logeast.cc/cdn/imghub/sponser.jpg" alt="">
+                <img width="240px" height="300px" class="mt-4" src="https://logeast.cc/cdn/imghub/sponser.jpg" alt="">
               </div>
 
               <!-- <SvgIcon icon="ri:bubble-chart-fill" class="mr-2 text-3xl" />
