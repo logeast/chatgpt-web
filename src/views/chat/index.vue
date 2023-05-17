@@ -524,7 +524,7 @@ onUnmounted(() => {
             </span>
           </HoverButton>
           <HoverButton v-if="!isMobile" @click="toggleUsingContext">
-            <span class="text-xl" :class="{ 'text-[#4b9e5f]': usingContext, 'text-[#a8071a]': !usingContext }">
+            <span class="text-xl" :class="{ 'text-[#ED4192]': usingContext, 'text-[#a8071a]': !usingContext }">
               <SvgIcon icon="ri:chat-history-line" />
             </span>
           </HoverButton>
@@ -545,7 +545,7 @@ onUnmounted(() => {
           </NAutoComplete>
           <NButton type="primary" :disabled="buttonDisabled" @click="handleSubmit">
             <template #icon>
-              <span class="dark:text-black">
+              <span class="dark:text-white">
                 <SvgIcon icon="ri:send-plane-fill" />
               </span>
             </template>
