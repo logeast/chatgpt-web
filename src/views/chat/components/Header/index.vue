@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 import { computed, nextTick, ref, watchEffect } from 'vue'
+import { NModal } from 'naive-ui'
+import Sponsor from '../Sponsor/index.vue'
 import { HoverButton, SvgIcon } from '@/components/common'
 import { useAppStore, useChatStore } from '@/store'
 
@@ -71,16 +73,6 @@ function toggleUsingContext() {
         {{ currentChatHistory?.title ?? '' }}
       </h1>
       <div class="flex items-center space-x-2">
-        <HoverButton @click="toggleUsingContext">
-          <span class="text-xl" :class="{ 'text-[#ED4192]': usingContext, 'text-[#a8071a]': !usingContext }">
-            <SvgIcon icon="ri:chat-history-line" />
-          </span>
-        </HoverButton>
-        <HoverButton @click="handleExport">
-          <span class="text-xl text-[#4f555e] dark:text-white">
-            <SvgIcon icon="ri:download-2-line" />
-          </span>
-        </HoverButton>
         <HoverButton @click="showSponsor = true">
           <span class="text-xl" :class="{ 'text-[#ED4192]': usingContext, 'text-[#a8071a]': !usingContext }">
             <n-icon>
@@ -96,7 +88,22 @@ function toggleUsingContext() {
             </n-icon>
           </span>
         </HoverButton>
+        <HoverButton @click="toggleUsingContext">
+          <span class="text-xl" :class="{ 'text-[#ED4192]': usingContext, 'text-[#a8071a]': !usingContext }">
+            <SvgIcon icon="ri:chat-history-line" />
+          </span>
+        </HoverButton>
+        <HoverButton @click="handleExport">
+          <span class="text-xl text-[#4f555e] dark:text-white">
+            <SvgIcon icon="ri:download-2-line" />
+          </span>
+        </HoverButton>
       </div>
     </div>
   </header>
+  <NModal v-model:show="showSponsor" preset="card" style="width: 480px">
+    <div class="-mt-4">
+      <Sponsor />
+    </div>
+  </NModal>
 </template>
