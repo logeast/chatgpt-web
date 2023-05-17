@@ -466,35 +466,49 @@ onUnmounted(() => {
 <template>
   <div class="flex flex-col w-full h-full">
     <HeaderComponent
-      v-if="isMobile"
-      :using-context="usingContext"
-      @export="handleExport"
+      v-if="isMobile" :using-context="usingContext" @export="handleExport"
       @toggle-using-context="toggleUsingContext"
     />
     <main class="flex-1 overflow-hidden">
       <div id="scrollRef" ref="scrollRef" class="h-full overflow-hidden overflow-y-auto">
         <div
-          id="image-wrapper"
-          class="w-full max-w-screen-xl m-auto dark:bg-[#101014]"
+          id="image-wrapper" class="w-full max-w-screen-xl m-auto dark:bg-[#101014]"
           :class="[isMobile ? 'p-2' : 'p-4']"
         >
           <template v-if="!dataSources.length">
-            <div class="flex items-center justify-center mt-4 text-center text-neutral-300">
-              <SvgIcon icon="ri:bubble-chart-fill" class="mr-2 text-3xl" />
-              <span>Aha~</span>
+            <div class="flex flex-col gap-4 my-4">
+              <div class="flex items-center justify-center gap-3 text-center">
+                <img class="w-10 h-10" src="https://logeast.cc/cdn/imghub/logo.png" alt="">
+                <div class="font-semibold text-2xl flex items-center gap-2">
+                  <span>桃李</span>
+                  <span class="font-thin text-gray-300 -mt-1">|</span>
+                  <span>GPT 助手</span>
+                </div>
+              </div>
+              <span class="text-center">免费用于学习和测试，<span class="border border-gray-200 bg-[#FFF0F4] px-1 rounded inline-block dark:bg-[#FFE8F0] dark:text-gray-900">ctrl/cmd
+                + d</span> 收藏网址以免迷路</span>
+              <div class="flex flex-col justify-center items-center">
+                <div class="text-center">
+                  禁止发布违法违规内容，使用本网站视您接受并同意<a
+                    href="https://docs.qq.com/doc/p/f0506f04406de2bd7846fdecff8b3dabaf7250e4?u=833688428354490f9f6307bc0a4905d5"
+                    target="_blank" class="text-blue-500"
+                  >桃李服务协议</a>
+                </div>
+                <div class="text-center text-red-500 pb-2">
+                  服务器昂贵，接口昂贵，但网站免费，每人每月捐 3 元，就能永久免费下去
+                </div>
+                <img width="240px" height="360px" src="https://logeast.cc/cdn/imghub/sponser.jpg" alt="">
+              </div>
+
+              <!-- <SvgIcon icon="ri:bubble-chart-fill" class="mr-2 text-3xl" />
+              <span>Aha~</span> -->
             </div>
           </template>
           <template v-else>
             <div>
               <Message
-                v-for="(item, index) of dataSources"
-                :key="index"
-                :date-time="item.dateTime"
-                :text="item.text"
-                :inversion="item.inversion"
-                :error="item.error"
-                :loading="item.loading"
-                @regenerate="onRegenerate(index)"
+                v-for="(item, index) of dataSources" :key="index" :date-time="item.dateTime" :text="item.text"
+                :inversion="item.inversion" :error="item.error" :loading="item.loading" @regenerate="onRegenerate(index)"
                 @delete="handleDelete(index)"
               />
               <div class="sticky bottom-0 left-0 flex justify-center">
@@ -531,15 +545,9 @@ onUnmounted(() => {
           <NAutoComplete v-model:value="prompt" :options="searchOptions" :render-label="renderOption">
             <template #default="{ handleInput, handleBlur, handleFocus }">
               <NInput
-                ref="inputRef"
-                v-model:value="prompt"
-                type="textarea"
-                :placeholder="placeholder"
-                :autosize="{ minRows: 1, maxRows: isMobile ? 4 : 8 }"
-                @input="handleInput"
-                @focus="handleFocus"
-                @blur="handleBlur"
-                @keypress="handleEnter"
+                ref="inputRef" v-model:value="prompt" type="textarea" :placeholder="placeholder"
+                :autosize="{ minRows: 1, maxRows: isMobile ? 4 : 8 }" @input="handleInput" @focus="handleFocus"
+                @blur="handleBlur" @keypress="handleEnter"
               />
             </template>
           </NAutoComplete>
