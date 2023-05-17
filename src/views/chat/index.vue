@@ -489,7 +489,7 @@ onUnmounted(() => {
                 + d</span> 收藏网址以免迷路</span>
               <div class="flex flex-col justify-center items-center">
                 <div class="text-center">
-                  禁止发布违法违规内容，使用本网站视您接受并同意<a
+                  使用本网站视您接受并同意<a
                     href="https://docs.qq.com/doc/p/f0506f04406de2bd7846fdecff8b3dabaf7250e4?u=833688428354490f9f6307bc0a4905d5"
                     target="_blank" class="text-blue-500"
                   >桃李服务协议</a>
