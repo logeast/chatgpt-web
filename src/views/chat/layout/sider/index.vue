@@ -16,8 +16,8 @@ const { isMobile } = useBasicLayout()
 const show = ref(false)
 const showSponsor = ref(false)
 watchEffect(() => {
-  // 2~3 小时弹出一次
-  const waitTime = Math.floor(Math.random() * 3600000) + 7200000
+  // 30~60 分钟弹出一次
+  const waitTime = Math.floor(Math.random() * 1800000) + 1800000
   setInterval(() => {
     showSponsor.value = true
   }, waitTime)
@@ -114,9 +114,9 @@ watch(
   </template>
   <PromptStore v-model:visible="show" />
   <NModal v-model:show="showSponsor" preset="card" style="width: 480px">
-    <div class="-mt-8">
+    <div class="-mt-8 flex flex-col items-center">
       <Sponsor />
-      <img class="w-full mt-4" src="https://logeast.cc/cdn/imghub/taoli-lab-qr.png" alt="">
+      <img class="w-[420px] h-[153px] mt-2" src="https://logeast.cc/cdn/imghub/taoli-lab-qr.png" alt="">
     </div>
   </NModal>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center gap-4 my-4">
+  <div class="flex flex-col items-center gap-4 my-2">
     <div class="flex items-center justify-center gap-3 text-center">
       <img class="w-10 h-10" src="https://logeast.cc/cdn/imghub/logo.png" alt="">
       <div class="font-semibold text-2xl flex items-center gap-2">
@@ -23,6 +23,6 @@
         服务器昂贵，接口昂贵，但网站免费，每人每月捐 3 元，就能永久免费下去
       </div>
     </div>
-    <img width="240px" height="300px" class="mt-4" src="https://logeast.cc/cdn/imghub/sponsor.png" alt="">
+    <img width="240px" height="300px" src="https://logeast.cc/cdn/imghub/sponsor.png" alt="">
   </div>
 </template>
