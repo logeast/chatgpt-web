@@ -10,11 +10,11 @@ function setupPlugins(env: ImportMetaEnv): PluginOption[] {
     env.VITE_GLOB_APP_PWA === 'true' && VitePWA({
       injectRegister: 'auto',
       manifest: {
-        name: 'chatGPT',
-        short_name: 'chatGPT',
+        name: '桃李·GPT 助手',
+        short_name: '桃李·GPT助手',
         icons: [
-          { src: 'pwa-192x192.png', sizes: '192x192', type: 'image/png' },
-          { src: 'pwa-512x512.png', sizes: '512x512', type: 'image/png' },
+          { src: 'https://logeast.cc/cdn/imghub/logo.png', sizes: '192x192', type: 'image/png' },
+          { src: 'https://logeast.cc/cdn/imghub/logo.png', sizes: '512x512', type: 'image/png' },
         ],
       },
     }),
