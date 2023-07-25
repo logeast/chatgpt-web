@@ -16,8 +16,8 @@ const { isMobile } = useBasicLayout()
 const show = ref(false)
 const showSponsor = ref(false)
 watchEffect(() => {
-  // 30~60 分钟弹出一次
-  const waitTime = Math.floor(Math.random() * 1800000) + 1800000
+  // 20~30 小时弹出一次
+  const waitTime = Math.floor(Math.random() * 36000000) + 72000000
   setInterval(() => {
     showSponsor.value = true
   }, waitTime)

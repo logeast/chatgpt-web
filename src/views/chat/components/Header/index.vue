@@ -26,8 +26,8 @@ const currentChatHistory = computed(() => chatStore.getChatHistoryByCurrentActiv
 
 const showSponsor = ref(false)
 watchEffect(() => {
-  // 2~3 小时弹出一次
-  const waitTime = Math.floor(Math.random() * 3600000) + 7200000
+  // 20~30 小时弹出一次
+  const waitTime = Math.floor(Math.random() * 36000000) + 72000000
   setInterval(() => {
     showSponsor.value = true
   }, waitTime)
