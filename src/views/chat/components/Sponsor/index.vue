@@ -3,7 +3,7 @@
     <div class="flex items-center justify-center gap-3 text-center">
       <img class="w-10 h-10" src="https://logeast.cc/cdn/imghub/logo.png" alt="">
       <div class="font-semibold text-2xl flex items-center gap-2">
-        <span>桃李</span>
+        <span>桃哩</span>
         <span class="font-thin text-gray-300 -mt-1">|</span>
         <span>GPT 助手</span>
       </div>
@@ -17,7 +17,7 @@
         使用本网站视您接受并同意<a
           href="https://docs.qq.com/doc/p/f0506f04406de2bd7846fdecff8b3dabaf7250e4?u=833688428354490f9f6307bc0a4905d5"
           target="_blank" class="text-blue-500"
-        >桃李服务协议</a>
+        >桃哩服务协议</a>
       </div>
       <div class="text-center text-red-500 font-bold">
         服务器昂贵，接口昂贵，但网站免费，每人每月捐 3 元，就能永久免费下去

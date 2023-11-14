@@ -10,8 +10,8 @@ function setupPlugins(env: ImportMetaEnv): PluginOption[] {
     env.VITE_GLOB_APP_PWA === 'true' && VitePWA({
       injectRegister: 'auto',
       manifest: {
-        name: '桃李·GPT 助手',
-        short_name: '桃李·GPT助手',
+        name: '桃哩·GPT 助手',
+        short_name: '桃哩·GPT助手',
         icons: [
           { src: 'https://logeast.cc/cdn/imghub/logo.png', sizes: '192x192', type: 'image/png' },
           { src: 'https://logeast.cc/cdn/imghub/logo.png', sizes: '512x512', type: 'image/png' },
@@ -25,7 +25,8 @@ export default defineConfig((env) => {
   const viteEnv = loadEnv(env.mode, process.cwd()) as unknown as ImportMetaEnv
 
   return {
-    base: '/gpt',
+    // base: '/gpt',
+    base: '/',
     resolve: {
       alias: {
         '@': path.resolve(process.cwd(), 'src'),

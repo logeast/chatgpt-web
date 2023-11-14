@@ -16,7 +16,7 @@ export function defaultSetting(): UserState {
   return {
     userInfo: {
       avatar: '',
-      name: '桃李实验室',
+      name: '桃哩实验室',
       description: 'Star on <a href="https://github.com/logeast/chatgpt-web" class="text-blue-500" target="_blank" >GitHub</a>',
     },
   }
